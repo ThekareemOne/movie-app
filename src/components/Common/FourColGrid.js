@@ -15,7 +15,7 @@ export default function FourColGrid(props) {
 
   return (
     <div className="grid">
-      <h1>Popular Movies</h1>
+      <h1 className="text-center p-4 mt-2">Popular Movies</h1>
       <div className="grid-content">{renderElements()}</div>
     </div>
   );

@@ -42,14 +42,14 @@ export default class Home extends Component {
       });
   };
 
-  loadMoreMovies() {
+  loadMoreMovies = () => {
     this.setState({
       loading: true
     });
     const endpoint = `${API_URL}movie/top_rated?api_key=${API_KEY}&language=en-US&page=${this
       .state.currentPage + 1}`;
     this.fetchItems(endpoint);
-  }
+  };
 
   render() {
     let featuredMovieContent;
@@ -85,8 +85,14 @@ export default class Home extends Component {
     return (
       <div className="home">
         <div>{featuredMovieContent}</div>
-        <FourColGrid movies={movieGrid} />
-        <LoadMore />
+        <div className="container">
+          <FourColGrid movies={movieGrid} />
+          {this.state.loading ? (
+            <Spinner />
+          ) : (
+            <LoadMore onClick={this.loadMoreMovies} text="Load More" />
+          )}
+        </div>
       </div>
     );
   }
