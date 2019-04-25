@@ -5,7 +5,7 @@ export default function FourColGrid(props) {
   const renderElements = () => {
     const gridElements = props.movies.map((element, index) => {
       return (
-        <div key={index} className="grid-element">
+        <div key={index} className="grid-element img-thumbnail rounded">
           {element}{" "}
         </div>
       );
