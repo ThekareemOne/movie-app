@@ -26,9 +26,10 @@ export default function MovieInfo(props) {
           />
         </div>
         <div className="movieinfo-text">
-          <h1>{props.movie.title}</h1>
-          <h3>{props.movie.plot}</h3>
-          <p>Overview</p>
+          <h1 className="h1" style={{ fontFamily: "Anton" }}>
+            {props.movie.title}
+          </h1>
+          <p className="lead">{props.movie.overview}</p>
           <h3>IMDB Rating</h3>
           <div className="rating">
             <meter
@@ -49,6 +50,12 @@ export default function MovieInfo(props) {
               </p>
             );
           })}
+          <p
+            className="mt-5 blockquote movieinfo-tagline"
+            style={{ fontFamily: "Muli" }}
+          >
+            {props.movie.tagline}
+          </p>
         </div>
       </div>
     </div>

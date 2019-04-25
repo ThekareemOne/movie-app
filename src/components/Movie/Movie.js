@@ -46,12 +46,18 @@ export default class Movie extends Component {
         {this.state.loading ? (
           <Spinner />
         ) : (
-          <MovieInfo
-            movie={this.state.movie}
-            directors={this.state.directors}
-          />
+          <React.Fragment>
+            <MovieInfo
+              movie={this.state.movie}
+              directors={this.state.directors}
+            />
+            <MovieInfoBar
+              time={this.state.movie.runtime}
+              budget={this.state.movie.budget}
+              revenue={this.state.movie.revenue}
+            />
+          </React.Fragment>
         )}
-        <MovieInfoBar />
       </div>
     );
   }
