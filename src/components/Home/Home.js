@@ -10,6 +10,7 @@ import FeaturedMovie from "../FeaturedMovie/FeaturedMovie";
 import FourColGrid from "../Common/FourColGrid";
 import Spinner from "../Common/Spinner";
 import LoadMore from "../LoadMore/LoadMore";
+import MovieThumb from "../MovieThumb/MovieThumb";
 import "./Home.css";
 
 export default class Home extends Component {
@@ -66,10 +67,25 @@ export default class Home extends Component {
         />
       );
     }
+    const movieGrid = this.state.movies.map((element, index) => {
+      return (
+        <MovieThumb
+          key={index}
+          movieId={element.id}
+          movieName={element.original_title}
+          image={
+            element.poster_path
+              ? `${IMAGE_BASE_URL}${POSTER_SIZE}${element.poster_path}`
+              : "images\no_image.jpg"
+          }
+        />
+      );
+    });
+
     return (
       <div className="home">
         <div>{featuredMovieContent}</div>
-        <FourColGrid />
+        <FourColGrid movies={movieGrid} />
         <LoadMore />
       </div>
     );
