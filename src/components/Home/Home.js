@@ -86,7 +86,7 @@ export default class Home extends Component {
       <div className="home">
         <div>{featuredMovieContent}</div>
         <div className="container">
-          <FourColGrid movies={movieGrid} />
+          <FourColGrid movies={movieGrid} message="Popular Movies" />
           {this.state.loading ? (
             <Spinner />
           ) : (
