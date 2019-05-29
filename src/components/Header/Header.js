@@ -4,17 +4,28 @@ import "./Header.css";
 
 export default function Header() {
   return (
-    <div className="header">
-      <div className="header-content">
-        <Link to="/">
-          <img
-            className="logo"
-            src="images\reactMovie_logo.png"
-            alt="React Logo"
-          />
-        </Link>
-        <img className="tmdb-logo" src="images\tmdb_logo.png" alt="TMDB Logo" />
+    <nav class="navbar navbar-expand-md navbar-dark header">
+      <div class="container">
+        <div class="navbar-header">
+          <Link class="navbar-brand" to="/">
+            MovieApp
+          </Link>
+        </div>
+        <div>
+          <ul class="nav navbar-nav">
+            <li class="nav-item">
+              <Link class="nav-link" to="/">
+                RANDOM
+              </Link>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" to="/contact">
+                CONTACT
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </nav>
   );
 }
