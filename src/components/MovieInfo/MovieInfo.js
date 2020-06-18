@@ -2,8 +2,11 @@ import React from "react";
 import "./MovieInfo.css";
 import { IMAGE_BASE_URL, BACKDROP_SIZE, POSTER_SIZE } from "../../config";
 import MovieThumb from "../MovieThumb/MovieThumb";
+import { Link } from "react-router-dom";
 
 export default function MovieInfo(props) {
+  console.log(props.movie);
+
   return (
     <div
       className="movieinfo"
@@ -30,7 +33,7 @@ export default function MovieInfo(props) {
             {props.movie.title}
           </h1>
           <p className="lead">{props.movie.overview}</p>
-          <h3>IMDB Rating</h3>
+          <h3><a href={`https://www.imdb.com/title/${props.movie.imdb_id}`} target="_blank" style={{color: "#E2B616", cursor: "pointer", textDecoration: "none"}}>IMDB</a> Rating</h3>
           <div className="rating">
             <meter
               min="0"
@@ -42,6 +45,12 @@ export default function MovieInfo(props) {
             />
             <p className="score">{props.movie.vote_average}</p>
           </div>
+          <p
+            className="mt-3"
+            style={{ fontFamily: "Muli" }}
+          >
+            Year: {props.movie.release_date.substring(0,4)}
+          </p>
           {props.directors.length > 1 ? <h3>Directors </h3> : <h3>Director</h3>}
           {props.directors.map((element, index) => {
             return (
