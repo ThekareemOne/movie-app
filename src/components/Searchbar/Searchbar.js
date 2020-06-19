@@ -20,7 +20,7 @@ export default class Searchbar extends Component {
     return (
       <div>
         <div className="searchbar mt-4 rounded">
-          <i class="fa fa-search" />
+          <i className="fa fa-search" />
           <input
             type="text"
             className="searchbar-input"

@@ -44,17 +44,17 @@ class Header extends Component {
 
   render() {
     return (
-      <nav class="navbar navbar-expand-md navbar-dark header">
-      <div class="container">
-        <div class="navbar-header">
-          <Link class="navbar-brand" to="/">
+      <nav className="navbar navbar-expand-md navbar-dark header">
+      <div className="container">
+        <div className="navbar-header">
+          <Link className="navbar-brand" to="/">
             MovieApp
           </Link>
         </div>
         <div>
-          <ul class="nav navbar-nav">
-            <li class="nav-item">
-              <Link class="nav-link" to="/" onClick={this.getRandom}>
+          <ul className="nav navbar-nav">
+            <li className="nav-item">
+              <Link className="nav-link" to="/" onClick={this.getRandom}>
                 RANDOM
               </Link>
             </li>

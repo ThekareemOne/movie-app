@@ -5,8 +5,6 @@ import MovieThumb from "../MovieThumb/MovieThumb";
 import { Link } from "react-router-dom";
 
 export default function MovieInfo(props) {
-  console.log(props.movie);
-
   return (
     <div
       className="movieinfo"
@@ -32,7 +30,7 @@ export default function MovieInfo(props) {
           <h1 className="h1" style={{ fontFamily: "Anton" }}>
             {props.movie.title}
           </h1>
-          <p className="lead">{props.movie.overview}</p>
+          <p className="lead movie-overview">{props.movie.overview}</p>
           <h3><a href={`https://www.imdb.com/title/${props.movie.imdb_id}`} target="_blank" style={{color: "#E2B616", cursor: "pointer", textDecoration: "none"}}>IMDB</a> Rating</h3>
           <div className="rating">
             <meter
@@ -60,7 +58,7 @@ export default function MovieInfo(props) {
             );
           })}
           <p
-            className="mt-5 blockquote movieinfo-tagline"
+            className="blockquote movieinfo-tagline"
             style={{ fontFamily: "Muli" }}
           >
             {props.movie.tagline}

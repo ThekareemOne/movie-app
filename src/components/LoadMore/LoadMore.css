@@ -17,3 +17,22 @@
 .loadmorebtn:hover {
   opacity: 0.8;
 }
+
+@media screen and (max-width: 720px) {
+  .loadmorebtn {
+    background: #16d47b;
+    width: 100%;
+    min-height: 20px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .loadmorebtn p {
+    font-family: "Abel", sans-serif;
+    font-size: 30px;
+    padding: 5px;
+  }
+  
+}

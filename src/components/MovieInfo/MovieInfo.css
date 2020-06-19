@@ -64,6 +64,11 @@
   line-height: 26px;
 }
 
+.movieinfo-tagline { 
+  margin-top: 10px;
+}
+
+
 .rating {
   width: 250px;
   height: 20px;
@@ -75,7 +80,7 @@
   position: absolute;
   margin: 0;
   right: 0px;
-  top: -3px;
+  top: -1px;
 }
 
 .director {
@@ -101,4 +106,57 @@ meter::-webkit-meter-suboptimum-value {
 }
 meter::-webkit-meter-even-less-good-value {
   background: linear-gradient(to bottom, #ee5f5b);
+}
+
+
+@media screen and (max-width: 720px){
+  .movieinfo-thumb {
+    display: none;
+  }
+.movieinfo-text {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  width: auto; 
+  padding: 20px;
+  color: #fff;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: absolute; 
+  left: 0px;
+}
+.movieinfo-text h1 {
+  font-family: "Abel", sans-serif;
+  font-size: 30px;
+  padding-bottom: 5px;
+}
+
+.movieinfo-text h3 {
+  font-size: 14px;
+  line-height: 0;
+  margin-top: 30px;
+}
+
+.movieinfo-text p {
+  font-family: "Abel", sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.movieinfo-tagline { 
+  margin-top: 3px;
+}
+
+.rating {
+  width: 230px;
+  height: 10px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.score {
+  position: absolute;
+  margin: 0;
+  right: 0px;
+  top: 2px;
+}
 }
