@@ -1,4 +1,4 @@
-![Movie App](https://imgur.com/a/4CNTHl4)
+![Movie App](movie-app-gif.gif)
 
 This is a responsive movie webapp created using react. The webapp uses the TMDB API. The webapp is connected to IMDB and has various functionalities including searching and  getting a random movie.
 
